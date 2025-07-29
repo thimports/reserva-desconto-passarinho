@@ -47,20 +47,6 @@ const questions: Question[] = [
     options: ["1", "2", "3", "4"],
     correctAnswer: 0,
     explanation: "Um passarinho especial que representa toda a personalidade da marca!"
-  },
-  {
-    id: 4,
-    question: "Qual é o estilo característico das estampas da Reserva?",
-    options: ["Sérias", "Divertidas", "Formais", "Tradicionais"],
-    correctAnswer: 1,
-    explanation: "As estampas divertidas e criativas são o DNA da Reserva!"
-  },
-  {
-    id: 5,
-    question: "Qual é o público principal da Reserva?",
-    options: ["Crianças", "Jovens descolados", "Idosos", "Empresários"],
-    correctAnswer: 1,
-    explanation: "A Reserva é para quem tem personalidade e ama se expressar!"
   }
 ];
 
@@ -75,10 +61,10 @@ export const QuizGame = () => {
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
 
   const progress = ((currentQuestion + (showResult ? 1 : 0)) / questions.length) * 100;
-  const currentDiscount = Math.min((currentQuestion + (showResult && answeredCorrectly ? 1 : 0)) * 20, 100);
+  const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 20, 60);
 
   useEffect(() => {
-    if (showResult && answeredCorrectly) {
+    if (showResult) {
       setDiscount(currentDiscount);
       setShowConfetti(true);
       
@@ -88,7 +74,7 @@ export const QuizGame = () => {
       
       setTimeout(() => setShowConfetti(false), 3000);
     }
-  }, [showResult, answeredCorrectly, currentQuestion, currentDiscount]);
+  }, [showResult, currentQuestion, currentDiscount]);
 
   const handleAnswerSelect = (answerIndex: number) => {
     if (showResult) return;
