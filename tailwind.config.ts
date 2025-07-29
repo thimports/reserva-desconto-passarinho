@@ -61,7 +61,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				reserva: {
+					red: 'hsl(var(--reserva-red))',
+					'red-light': 'hsl(var(--reserva-red-light))',
+					'red-dark': 'hsl(var(--reserva-red-dark))',
+					black: 'hsl(var(--reserva-black))',
+					white: 'hsl(var(--reserva-white))',
+					gray: 'hsl(var(--reserva-gray))',
+					'light-gray': 'hsl(var(--reserva-light-gray))'
 				}
+			},
+			fontFamily: {
+				'reserva': ['Inter', 'Roboto', 'system-ui', 'sans-serif'],
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'medium': 'var(--shadow-medium)',
+				'celebration': 'var(--shadow-celebration)',
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-celebration': 'var(--gradient-celebration)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

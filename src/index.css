@@ -8,35 +8,59 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
+    /* Reserva Design System */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 0%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Reserva Red - Cor principal da marca */
+    --primary: 0 82% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 82% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 0 82% 55%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Reserva Custom Colors */
+    --reserva-red: 0 82% 55%;
+    --reserva-red-light: 0 82% 70%;
+    --reserva-red-dark: 0 82% 40%;
+    --reserva-black: 0 0% 0%;
+    --reserva-white: 0 0% 100%;
+    --reserva-gray: 0 0% 45%;
+    --reserva-light-gray: 0 0% 96%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--reserva-red)), hsl(var(--reserva-red-light)));
+    --gradient-celebration: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4ecdc4, #45b7d1);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-celebration: 0 20px 25px -5px rgba(230, 36, 41, 0.3), 0 10px 10px -5px rgba(230, 36, 41, 0.04);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +125,125 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', 'Roboto', sans-serif;
+  }
+}
+
+@layer utilities {
+  /* Quiz Animations */
+  .quiz-bounce {
+    animation: quizBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .quiz-celebration {
+    animation: celebration 0.8s ease-out;
+  }
+  
+  .quiz-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+  
+  .quiz-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  .confetti-pop {
+    animation: confettiPop 0.6s ease-out;
+  }
+  
+  .discount-grow {
+    animation: discountGrow 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Progress Bar Animation */
+  .progress-fill {
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Button Hover Effects */
+  .quiz-button {
+    @apply transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes quizBounce {
+  0% { 
+    transform: scale(0.3) rotate(-10deg); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(1.05) rotate(2deg); 
+  }
+  70% { 
+    transform: scale(0.9) rotate(-1deg); 
+  }
+  100% { 
+    transform: scale(1) rotate(0deg); 
+    opacity: 1; 
+  }
+}
+
+@keyframes celebration {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg); 
+  }
+  25% { 
+    transform: scale(1.1) rotate(5deg); 
+  }
+  50% { 
+    transform: scale(1.15) rotate(-5deg); 
+  }
+  75% { 
+    transform: scale(1.1) rotate(3deg); 
+  }
+}
+
+@keyframes shake {
+  0%, 100% { 
+    transform: translateX(0); 
+  }
+  10%, 30%, 50%, 70%, 90% { 
+    transform: translateX(-5px); 
+  }
+  20%, 40%, 60%, 80% { 
+    transform: translateX(5px); 
+  }
+}
+
+@keyframes confettiPop {
+  0% { 
+    transform: scale(0) rotate(0deg); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: scale(1.3) rotate(180deg); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: scale(1) rotate(360deg); 
+    opacity: 1; 
+  }
+}
+
+@keyframes discountGrow {
+  0% { 
+    transform: scale(0.5); 
+    opacity: 0; 
+  }
+  60% { 
+    transform: scale(1.2); 
+    opacity: 0.8; 
+  }
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
   }
 }
