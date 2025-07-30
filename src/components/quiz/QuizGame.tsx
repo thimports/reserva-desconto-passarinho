@@ -5,6 +5,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Confetti } from './Confetti';
 import { SoundManager } from './SoundManager';
+import { Footer } from '@/components/Footer';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
 import reservaLogo from '/lovable-uploads/b7edff21-dbbb-4651-838d-8f525572a31b.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
@@ -107,7 +108,8 @@ export const QuizGame = () => {
     window.open('https://www.usereserva.com/', '_blank');
   };
   if (gameCompleted) {
-    return <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-reserva-red-dark flex items-center justify-center p-2 sm:p-4">
+    return <>
+      <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-reserva-red-dark flex items-center justify-center p-2 sm:p-4">
         {showConfetti && <Confetti />}
         <SoundManager enabled={soundEnabled} />
         
@@ -156,9 +158,12 @@ export const QuizGame = () => {
             </Button>
           </div>
         </Card>
-      </div>;
+      </div>
+      <Footer />
+    </>;
   }
-  return <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-2 sm:p-4">
+  return <>
+    <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-2 sm:p-4">
       {showConfetti && <Confetti />}
       <SoundManager enabled={soundEnabled} />
       
@@ -267,5 +272,7 @@ export const QuizGame = () => {
             </div>}
         </Card>
       </div>
-    </div>;
+    </div>
+    <Footer />
+  </>;
 };
