@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Confetti } from './Confetti';
 import { SoundManager } from './SoundManager';
 import { Footer } from '@/components/Footer';
+import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
 import reservaLogo from '/lovable-uploads/b7edff21-dbbb-4651-838d-8f525572a31b.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
@@ -159,6 +160,7 @@ export const QuizGame = () => {
           </div>
         </Card>
       </div>
+      <AppDownloadBanner />
       <Footer />
     </>;
   }
@@ -273,6 +275,7 @@ export const QuizGame = () => {
         </Card>
       </div>
     </div>
+    <AppDownloadBanner />
     <Footer />
   </>;
 };
