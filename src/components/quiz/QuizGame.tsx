@@ -167,7 +167,7 @@ export const QuizGame = () => {
         <div className="text-center space-y-4">
           {/* Logo principal no topo */}
           <div className="flex justify-center mb-4">
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-medium">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center shadow-medium">
               <img src={reservaLogo} alt="Logo" className="w-10 h-10 sm:w-12 sm:h-12" />
             </div>
           </div>
