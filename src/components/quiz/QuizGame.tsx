@@ -6,18 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Confetti } from './Confetti';
 import { SoundManager } from './SoundManager';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
-import { 
-  Trophy, 
-  Star, 
-  Gift, 
-  Sparkles, 
-  ChevronRight,
-  Share2,
-  ShoppingBag,
-  Volume2,
-  VolumeX
-} from 'lucide-react';
-
+import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
 interface Question {
   id: number;
   question: string;
@@ -25,31 +14,25 @@ interface Question {
   correctAnswer: number;
   explanation?: string;
 }
-
-const questions: Question[] = [
-  {
-    id: 1,
-    question: "Qual é o mascote icônico da Reserva?",
-    options: ["Gato", "Passarinho", "Cachorro", "Peixe"],
-    correctAnswer: 1,
-    explanation: "O Passarinho é o símbolo mais querido da Reserva!"
-  },
-  {
-    id: 2,
-    question: "Em que peça a Reserva ficou famosa?",
-    options: ["Calça", "Camisa", "Camiseta", "Bermuda"],
-    correctAnswer: 2,
-    explanation: "As camisetas com estampas criativas são a marca registrada da Reserva!"
-  },
-  {
-    id: 3,
-    question: "Quantos passarinhos aparecem no logo da Reserva?",
-    options: ["1", "2", "3", "4"],
-    correctAnswer: 0,
-    explanation: "Um passarinho especial que representa toda a personalidade da marca!"
-  }
-];
-
+const questions: Question[] = [{
+  id: 1,
+  question: "Qual é o mascote icônico da Reserva?",
+  options: ["Gato", "Passarinho", "Cachorro", "Peixe"],
+  correctAnswer: 1,
+  explanation: "O Passarinho é o símbolo mais querido da Reserva!"
+}, {
+  id: 2,
+  question: "Em que peça a Reserva ficou famosa?",
+  options: ["Calça", "Camisa", "Camiseta", "Bermuda"],
+  correctAnswer: 2,
+  explanation: "As camisetas com estampas criativas são a marca registrada da Reserva!"
+}, {
+  id: 3,
+  question: "Quantos passarinhos aparecem no logo da Reserva?",
+  options: ["1", "2", "3", "4"],
+  correctAnswer: 0,
+  explanation: "Um passarinho especial que representa toda a personalidade da marca!"
+}];
 export const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -59,35 +42,27 @@ export const QuizGame = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
-
-  const progress = ((currentQuestion + (showResult ? 1 : 0)) / questions.length) * 100;
+  const progress = (currentQuestion + (showResult ? 1 : 0)) / questions.length * 100;
   const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 20, 60);
-
   useEffect(() => {
     if (showResult) {
       setDiscount(currentDiscount);
       setShowConfetti(true);
-      
       if (currentQuestion === questions.length - 1) {
         setGameCompleted(true);
       }
-      
       setTimeout(() => setShowConfetti(false), 3000);
     }
   }, [showResult, currentQuestion, currentDiscount]);
-
   const handleAnswerSelect = (answerIndex: number) => {
     if (showResult) return;
     setSelectedAnswer(answerIndex);
   };
-
   const handleNextQuestion = () => {
     if (selectedAnswer === null) return;
-
     const isCorrect = selectedAnswer === questions[currentQuestion].correctAnswer;
     setAnsweredCorrectly(isCorrect);
     setShowResult(true);
-
     if (soundEnabled) {
       setTimeout(() => {
         if (isCorrect) {
@@ -98,7 +73,6 @@ export const QuizGame = () => {
       }, 100);
     }
   };
-
   const handleContinue = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -107,7 +81,6 @@ export const QuizGame = () => {
       setAnsweredCorrectly(false);
     }
   };
-
   const handleRestart = () => {
     setCurrentQuestion(0);
     setSelectedAnswer(null);
@@ -117,28 +90,23 @@ export const QuizGame = () => {
     setShowConfetti(false);
     setAnsweredCorrectly(false);
   };
-
   const toggleSound = () => {
     setSoundEnabled(!soundEnabled);
   };
-
   const shareResult = () => {
     if (navigator.share) {
       navigator.share({
         title: 'Quiz Reserva - Consegui 100% de desconto!',
         text: `Acabei de conquistar ${discount}% de desconto no Quiz da Reserva! 🎉`,
-        url: window.location.href,
+        url: window.location.href
       });
     }
   };
-
   const goToStore = () => {
     window.open('https://www.usereserva.com/', '_blank');
   };
-
   if (gameCompleted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-reserva-red-dark flex items-center justify-center p-4">
+    return <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-reserva-red-dark flex items-center justify-center p-4">
         {showConfetti && <Confetti />}
         <SoundManager enabled={soundEnabled} />
         
@@ -171,42 +139,25 @@ export const QuizGame = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="celebration" 
-                size="xl" 
-                onClick={goToStore}
-                className="flex items-center gap-2"
-              >
+              <Button variant="celebration" size="xl" onClick={goToStore} className="flex items-center gap-2">
                 <ShoppingBag className="w-6 h-6" />
                 IR PARA A LOJA
               </Button>
               
-              <Button 
-                variant="outline" 
-                size="xl" 
-                onClick={shareResult}
-                className="flex items-center gap-2"
-              >
+              <Button variant="outline" size="xl" onClick={shareResult} className="flex items-center gap-2">
                 <Share2 className="w-5 h-5" />
                 COMPARTILHAR
               </Button>
             </div>
 
-            <Button 
-              variant="ghost" 
-              onClick={handleRestart}
-              className="text-reserva-gray hover:text-reserva-black"
-            >
+            <Button variant="ghost" onClick={handleRestart} className="text-reserva-gray hover:text-reserva-black">
               Jogar novamente
             </Button>
           </div>
         </Card>
-      </div>
-    );
+      </div>;
   }
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-4">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-4">
       {showConfetti && <Confetti />}
       <SoundManager enabled={soundEnabled} />
       
@@ -215,11 +166,7 @@ export const QuizGame = () => {
         <div className="text-center space-y-4">
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-4 mb-4">
-              <img 
-                src={birdMascot} 
-                alt="Passarinho Reserva" 
-                className="w-16 h-16 md:w-20 md:h-20 quiz-pulse"
-              />
+              
               <h1 className="text-3xl md:text-4xl font-black text-reserva-black">
                 QUIZ <span className="gradient-text">RESERVA</span>
               </h1>
@@ -230,12 +177,7 @@ export const QuizGame = () => {
           </div>
           
           {/* Sound Toggle */}
-          <Button 
-            variant="ghost" 
-            size="icon"
-            onClick={toggleSound}
-            className="absolute top-4 right-4"
-          >
+          <Button variant="ghost" size="icon" onClick={toggleSound} className="absolute top-4 right-4">
             {soundEnabled ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
           </Button>
         </div>
@@ -255,8 +197,7 @@ export const QuizGame = () => {
 
         {/* Quiz Card */}
         <Card className="p-6 md:p-8 shadow-medium">
-          {!showResult ? (
-            <div className="space-y-6">
+          {!showResult ? <div className="space-y-6">
               <div className="text-center">
                 <h2 className="text-xl md:text-2xl font-bold text-reserva-black mb-6">
                   {questions[currentQuestion].question}
@@ -264,42 +205,21 @@ export const QuizGame = () => {
               </div>
 
               <div className="grid gap-3">
-                {questions[currentQuestion].options.map((option, index) => (
-                  <Button
-                    key={index}
-                    variant="quiz-answer"
-                    size="lg"
-                    onClick={() => handleAnswerSelect(index)}
-                    className={`text-left justify-start h-auto py-4 px-6 ${
-                      selectedAnswer === index 
-                        ? 'border-primary bg-primary/10 ring-2 ring-primary ring-offset-2' 
-                        : ''
-                    }`}
-                  >
+                {questions[currentQuestion].options.map((option, index) => <Button key={index} variant="quiz-answer" size="lg" onClick={() => handleAnswerSelect(index)} className={`text-left justify-start h-auto py-4 px-6 ${selectedAnswer === index ? 'border-primary bg-primary/10 ring-2 ring-primary ring-offset-2' : ''}`}>
                     <span className="font-bold text-primary mr-3">
                       {String.fromCharCode(65 + index)}
                     </span>
                     {option}
-                  </Button>
-                ))}
+                  </Button>)}
               </div>
 
-              <Button
-                variant="quiz"
-                size="xl"
-                onClick={handleNextQuestion}
-                disabled={selectedAnswer === null}
-                className="w-full"
-              >
+              <Button variant="quiz" size="xl" onClick={handleNextQuestion} disabled={selectedAnswer === null} className="w-full">
                 CONFIRMAR RESPOSTA
                 <ChevronRight className="w-5 h-5" />
               </Button>
-            </div>
-          ) : (
-            <div className="text-center space-y-6">
+            </div> : <div className="text-center space-y-6">
               <div className={answeredCorrectly ? 'quiz-celebration' : 'quiz-shake'}>
-                {answeredCorrectly ? (
-                  <div className="space-y-4">
+                {answeredCorrectly ? <div className="space-y-4">
                     <Star className="w-16 h-16 mx-auto text-primary" />
                     <h3 className="text-2xl font-black text-reserva-black">
                       ACERTOU! 🎉
@@ -309,25 +229,20 @@ export const QuizGame = () => {
                         +20% OFF
                       </Badge>
                     </div>
-                  </div>
-                ) : (
-                  <div className="space-y-4">
+                  </div> : <div className="space-y-4">
                     <Gift className="w-16 h-16 mx-auto text-reserva-gray" />
                     <h3 className="text-2xl font-black text-reserva-black">
                       Quase lá! 
                     </h3>
                     <p className="text-reserva-gray">Mas você ainda ganha desconto!</p>
-                  </div>
-                )}
+                  </div>}
               </div>
 
-              {questions[currentQuestion].explanation && (
-                <div className="bg-reserva-light-gray rounded-xl p-4">
+              {questions[currentQuestion].explanation && <div className="bg-reserva-light-gray rounded-xl p-4">
                   <p className="text-reserva-black font-medium">
                     {questions[currentQuestion].explanation}
                   </p>
-                </div>
-              )}
+                </div>}
 
               <div className="space-y-3">
                 <div className="text-sm text-reserva-gray">
@@ -338,19 +253,12 @@ export const QuizGame = () => {
                 </Badge>
               </div>
 
-              <Button
-                variant="quiz"
-                size="xl"
-                onClick={handleContinue}
-                className="w-full"
-              >
+              <Button variant="quiz" size="xl" onClick={handleContinue} className="w-full">
                 {currentQuestion === questions.length - 1 ? 'VER RESULTADO FINAL' : 'PRÓXIMA PERGUNTA'}
                 <ChevronRight className="w-5 h-5" />
               </Button>
-            </div>
-          )}
+            </div>}
         </Card>
       </div>
-    </div>
-  );
+    </div>;
 };
