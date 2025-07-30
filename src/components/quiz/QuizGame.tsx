@@ -165,9 +165,15 @@ export const QuizGame = () => {
       <div className="w-full max-w-2xl space-y-4 sm:space-y-6">
         {/* Header */}
         <div className="text-center space-y-4">
+          {/* Logo principal no topo */}
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-primary rounded-full flex items-center justify-center shadow-medium">
+              <img src={reservaLogo} alt="Logo" className="w-10 h-10 sm:w-12 sm:h-12" />
+            </div>
+          </div>
+          
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-              <img src={reservaLogo} alt="Reserva Logo" className="w-10 h-10 sm:w-12 sm:h-12" />
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-reserva-black">
                 QUIZ <span className="gradient-text">RESERVA</span>
               </h1>
