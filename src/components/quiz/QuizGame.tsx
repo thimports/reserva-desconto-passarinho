@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Confetti } from './Confetti';
 import { SoundManager } from './SoundManager';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
+import reservaLogo from '/lovable-uploads/b7edff21-dbbb-4651-838d-8f525572a31b.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
 interface Question {
   id: number;
@@ -166,7 +167,7 @@ export const QuizGame = () => {
         <div className="text-center space-y-4">
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-4 mb-4">
-              
+              <img src={reservaLogo} alt="Reserva Logo" className="w-12 h-12" />
               <h1 className="text-3xl md:text-4xl font-black text-reserva-black">
                 QUIZ <span className="gradient-text">RESERVA</span>
               </h1>
