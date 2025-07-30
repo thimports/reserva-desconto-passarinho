@@ -158,7 +158,7 @@ export const QuizGame = () => {
         </Card>
       </div>;
   }
-  return <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-2 sm:p-4">
+  return <div className="min-h-screen bg-black flex items-center justify-center p-2 sm:p-4">
       {showConfetti && <Confetti />}
       <SoundManager enabled={soundEnabled} />
       
@@ -174,11 +174,11 @@ export const QuizGame = () => {
           
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-reserva-black">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-white">
                 QUIZ <span className="gradient-text">RESERVA</span>
               </h1>
             </div>
-            <p className="text-base sm:text-lg text-reserva-gray">
+            <p className="text-base sm:text-lg text-gray-300">
               Responda e ganhe descontos incríveis! 🕊️
             </p>
           </div>
@@ -192,7 +192,7 @@ export const QuizGame = () => {
         {/* Progress */}
         <div className="space-y-3">
           <div className="flex justify-between items-center">
-            <span className="text-sm font-bold text-reserva-gray">
+            <span className="text-sm font-bold text-gray-300">
               Pergunta {currentQuestion + 1} de {questions.length}
             </span>
             <Badge variant="secondary" className="font-bold">
