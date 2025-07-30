@@ -66,6 +66,7 @@ export default {
 					red: 'hsl(var(--reserva-red))',
 					'red-light': 'hsl(var(--reserva-red-light))',
 					'red-dark': 'hsl(var(--reserva-red-dark))',
+					'store-button': 'hsl(var(--reserva-store-button))',
 					black: 'hsl(var(--reserva-black))',
 					white: 'hsl(var(--reserva-white))',
 					gray: 'hsl(var(--reserva-gray))',

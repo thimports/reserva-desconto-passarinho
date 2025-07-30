@@ -140,7 +140,7 @@ export const QuizGame = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="celebration" size="xl" onClick={goToStore} className="flex items-center gap-2">
+              <Button variant="store" size="xl" onClick={goToStore} className="flex items-center gap-2">
                 <ShoppingBag className="w-6 h-6" />
                 IR PARA A LOJA
               </Button>
