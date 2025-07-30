@@ -107,23 +107,23 @@ export const QuizGame = () => {
     window.open('https://www.usereserva.com/', '_blank');
   };
   if (gameCompleted) {
-    return <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-reserva-red-dark flex items-center justify-center p-4">
+    return <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-reserva-red-dark flex items-center justify-center p-2 sm:p-4">
         {showConfetti && <Confetti />}
         <SoundManager enabled={soundEnabled} />
         
-        <Card className="w-full max-w-2xl p-8 text-center quiz-celebration">
+        <Card className="w-full max-w-2xl p-4 sm:p-6 md:p-8 text-center quiz-celebration">
           <div className="space-y-6">
             <div className="quiz-bounce">
               <Trophy className="w-20 h-20 mx-auto text-primary mb-4" />
-              <h1 className="text-4xl md:text-5xl font-black text-reserva-black mb-2">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-reserva-black mb-2">
                 PARABÉNS! 🎉
               </h1>
-              <p className="text-xl md:text-2xl text-reserva-gray mb-6">
+              <p className="text-lg sm:text-xl md:text-2xl text-reserva-gray mb-4 sm:mb-6">
                 Você desbloqueou
               </p>
               
               <div className="discount-grow">
-                <Badge className="text-6xl md:text-7xl font-black bg-gradient-primary text-white px-8 py-4 rounded-2xl shadow-celebration">
+                <Badge className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black bg-gradient-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl shadow-celebration">
                   {discount}% OFF
                 </Badge>
               </div>
@@ -158,27 +158,27 @@ export const QuizGame = () => {
         </Card>
       </div>;
   }
-  return <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-4">
+  return <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-2 sm:p-4">
       {showConfetti && <Confetti />}
       <SoundManager enabled={soundEnabled} />
       
-      <div className="w-full max-w-2xl space-y-6">
+      <div className="w-full max-w-2xl space-y-4 sm:space-y-6">
         {/* Header */}
         <div className="text-center space-y-4">
           <div className="quiz-bounce">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <img src={reservaLogo} alt="Reserva Logo" className="w-12 h-12" />
-              <h1 className="text-3xl md:text-4xl font-black text-reserva-black">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+              <img src={reservaLogo} alt="Reserva Logo" className="w-10 h-10 sm:w-12 sm:h-12" />
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-reserva-black">
                 QUIZ <span className="gradient-text">RESERVA</span>
               </h1>
             </div>
-            <p className="text-lg text-reserva-gray">
+            <p className="text-base sm:text-lg text-reserva-gray">
               Responda e ganhe descontos incríveis! 🕊️
             </p>
           </div>
           
           {/* Sound Toggle */}
-          <Button variant="ghost" size="icon" onClick={toggleSound} className="absolute top-4 right-4">
+          <Button variant="ghost" size="icon" onClick={toggleSound} className="absolute top-2 right-2 sm:top-4 sm:right-4">
             {soundEnabled ? <Volume2 className="w-5 h-5" /> : <VolumeX className="w-5 h-5" />}
           </Button>
         </div>
@@ -197,16 +197,16 @@ export const QuizGame = () => {
         </div>
 
         {/* Quiz Card */}
-        <Card className="p-6 md:p-8 shadow-medium">
+        <Card className="p-4 sm:p-6 md:p-8 shadow-medium">
           {!showResult ? <div className="space-y-6">
               <div className="text-center">
-                <h2 className="text-xl md:text-2xl font-bold text-reserva-black mb-6">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-reserva-black mb-4 sm:mb-6">
                   {questions[currentQuestion].question}
                 </h2>
               </div>
 
               <div className="grid gap-3">
-                {questions[currentQuestion].options.map((option, index) => <Button key={index} variant="quiz-answer" size="lg" onClick={() => handleAnswerSelect(index)} className={`text-left justify-start h-auto py-4 px-6 ${selectedAnswer === index ? 'border-primary bg-primary/10 ring-2 ring-primary ring-offset-2' : ''}`}>
+                {questions[currentQuestion].options.map((option, index) => <Button key={index} variant="quiz-answer" size="lg" onClick={() => handleAnswerSelect(index)} className={`text-left justify-start h-auto py-3 sm:py-4 px-4 sm:px-6 text-sm sm:text-base ${selectedAnswer === index ? 'border-primary bg-primary/10 ring-2 ring-primary ring-offset-2' : ''}`}>
                     <span className="font-bold text-primary mr-3">
                       {String.fromCharCode(65 + index)}
                     </span>
