@@ -10,6 +10,7 @@ import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
 import reservaLogo from '/lovable-uploads/b7edff21-dbbb-4651-838d-8f525572a31b.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
+
 interface Question {
   id: number;
   question: string;
@@ -17,6 +18,7 @@ interface Question {
   correctAnswer: number;
   explanation?: string;
 }
+
 const questions: Question[] = [{
   id: 1,
   question: "Qual é o mascote icônico da Reserva?",
@@ -36,6 +38,7 @@ const questions: Question[] = [{
   correctAnswer: 0,
   explanation: "Um passarinho especial que representa toda a personalidade da marca!"
 }];
+
 export const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -47,6 +50,7 @@ export const QuizGame = () => {
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
   const progress = (currentQuestion + (showResult ? 1 : 0)) / questions.length * 100;
   const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 20, 60);
+
   useEffect(() => {
     if (showResult) {
       setDiscount(currentDiscount);
@@ -57,10 +61,12 @@ export const QuizGame = () => {
       setTimeout(() => setShowConfetti(false), 3000);
     }
   }, [showResult, currentQuestion, currentDiscount]);
+
   const handleAnswerSelect = (answerIndex: number) => {
     if (showResult) return;
     setSelectedAnswer(answerIndex);
   };
+
   const handleNextQuestion = () => {
     if (selectedAnswer === null) return;
     const isCorrect = selectedAnswer === questions[currentQuestion].correctAnswer;
@@ -76,6 +82,7 @@ export const QuizGame = () => {
       }, 100);
     }
   };
+
   const handleContinue = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -84,6 +91,7 @@ export const QuizGame = () => {
       setAnsweredCorrectly(false);
     }
   };
+
   const handleRestart = () => {
     setCurrentQuestion(0);
     setSelectedAnswer(null);
@@ -93,9 +101,11 @@ export const QuizGame = () => {
     setShowConfetti(false);
     setAnsweredCorrectly(false);
   };
+
   const toggleSound = () => {
     setSoundEnabled(!soundEnabled);
   };
+
   const shareResult = () => {
     if (navigator.share) {
       navigator.share({
@@ -105,9 +115,11 @@ export const QuizGame = () => {
       });
     }
   };
+
   const goToStore = () => {
-    window.open('https://www.usereserva.com/', '_blank');
+    window.open('https://reservabrasil.store/', '_blank');
   };
+
   if (gameCompleted) {
     return <>
       <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-reserva-red-dark flex items-center justify-center p-2 sm:p-4">
@@ -164,6 +176,7 @@ export const QuizGame = () => {
       <Footer />
     </>;
   }
+
   return <>
     <div className="min-h-screen bg-gradient-to-br from-background via-reserva-light-gray to-background flex items-center justify-center p-2 sm:p-4">
       {showConfetti && <Confetti />}
