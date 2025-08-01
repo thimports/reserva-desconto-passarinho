@@ -214,7 +214,7 @@ export const QuizGame = () => {
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               
             </div>
-            <p className="text-base sm:text-lg text-white">A cada resposta certa, você ganha 10% OFF. Complete tudo e aproveite até 60% de desconto no site oficial Netshoes! 🏃‍♂️</p>
+            <p className="text-base sm:text-lg text-white font-black">A cada resposta certa, você ganha 10% OFF. Complete tudo e aproveite até 60% de desconto no site oficial Netshoes! 🏃‍♂️</p>
           </div>
           
           {/* Sound Toggle */}
@@ -226,7 +226,7 @@ export const QuizGame = () => {
         {/* Progress */}
         <div className="space-y-3">
           <div className="flex justify-between items-center">
-            <span className="text-sm font-bold text-white">
+            <span className="text-sm font-black text-white">
               Pergunta {currentQuestion + 1} de {questions.length}
             </span>
             <Badge variant="secondary" className="font-bold">
