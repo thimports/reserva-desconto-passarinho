@@ -8,7 +8,7 @@ import { SoundManager } from './SoundManager';
 import { Footer } from '@/components/Footer';
 import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
-import reservaLogo from '/lovable-uploads/b7edff21-dbbb-4651-838d-8f525572a31b.png';
+import netshoesLogo from '/lovable-uploads/9dedd70b-630a-413f-aec7-b6a2b8b08fa5.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
 
 interface Question {
@@ -188,7 +188,7 @@ export const QuizGame = () => {
           {/* Logo principal no topo */}
           <div className="flex justify-center mb-4">
             <div className="w-16 h-16 sm:w-20 sm:h-20 bg-black rounded-full flex items-center justify-center shadow-medium">
-              <img src={reservaLogo} alt="Logo" className="w-10 h-10 sm:w-12 sm:h-12" />
+              <img src={netshoesLogo} alt="Logo" className="w-10 h-10 sm:w-12 sm:h-12" />
             </div>
           </div>
           
