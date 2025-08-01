@@ -8,7 +8,7 @@ import { SoundManager } from './SoundManager';
 import { Footer } from '@/components/Footer';
 import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
-import netshoesLogo from '/lovable-uploads/9dedd70b-630a-413f-aec7-b6a2b8b08fa5.png';
+import netshoesLogo from '/lovable-uploads/05728d4a-c13c-4907-83ab-1743b9c3dcf3.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
 
 interface Question {
@@ -185,6 +185,18 @@ export const QuizGame = () => {
       <div className="w-full max-w-2xl space-y-4 sm:space-y-6">
         {/* Header */}
         <div className="text-center space-y-4">
+          {/* Logo interativa da Netshoes */}
+          <div className="flex justify-center mb-6">
+            <div className="group cursor-pointer transition-all duration-300 hover:scale-110 hover:rotate-2">
+              <img 
+                src={netshoesLogo} 
+                alt="Netshoes Logo" 
+                className="h-12 sm:h-16 w-auto rounded-lg shadow-medium group-hover:shadow-celebration transition-all duration-300 hover:brightness-110"
+                onClick={() => window.open('https://www.netshoes.com.br/', '_blank')}
+              />
+            </div>
+          </div>
+          
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-netshoes-black">
