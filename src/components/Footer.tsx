@@ -1,8 +1,6 @@
 import { Facebook, Instagram, Youtube, Twitter, Linkedin, MessageCircle, Mail } from 'lucide-react';
-
 export const Footer = () => {
-  return (
-    <footer className="bg-white border-t border-gray-200 py-8 sm:py-12 px-4">
+  return <footer className="bg-white border-t border-gray-200 py-8 sm:py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
           {/* Sobre a Reserva */}
@@ -96,11 +94,8 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
-          <p className="text-reserva-gray text-xs sm:text-sm">
-            © 2024 Reserva. Todos os direitos reservados.
-          </p>
+          <p className="text-reserva-gray text-xs sm:text-sm">© 2025 Netshoes. Todos os direitos reservados.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
