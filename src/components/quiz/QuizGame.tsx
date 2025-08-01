@@ -9,7 +9,6 @@ import { Footer } from '@/components/Footer';
 import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
 import quizNetshoesLogo from '/lovable-uploads/d4e7fb9b-ecc9-46e8-82d4-c1590ce67235.png';
-
 import quizImage1 from '@/assets/quiz-question-1.jpg';
 import quizImage2 from '@/assets/quiz-question-2.jpg';
 import quizImage3 from '@/assets/quiz-question-3.jpg';
@@ -17,7 +16,6 @@ import quizImage4 from '@/assets/quiz-question-4.jpg';
 import quizImage5 from '@/assets/quiz-question-5.jpg';
 import quizImage6 from '@/assets/quiz-question-6.jpg';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
-
 interface Question {
   id: number;
   question: string;
@@ -25,7 +23,6 @@ interface Question {
   correctAnswer: number;
   explanation?: string;
 }
-
 const questions: Question[] = [{
   id: 1,
   question: "Qual é a cor principal do logo da Netshoes?",
@@ -63,9 +60,7 @@ const questions: Question[] = [{
   correctAnswer: 0,
   explanation: "Perfeito! Na Netshoes você encontra Nike, Adidas e muitas outras marcas incríveis! 🌟"
 }];
-
 const quizImages = [quizImage1, quizImage2, quizImage3, quizImage4, quizImage5, quizImage6];
-
 export const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
@@ -77,7 +72,6 @@ export const QuizGame = () => {
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
   const progress = (currentQuestion + (showResult ? 1 : 0)) / questions.length * 100;
   const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 10, 60);
-
   useEffect(() => {
     if (showResult) {
       setDiscount(currentDiscount);
@@ -88,12 +82,10 @@ export const QuizGame = () => {
       setTimeout(() => setShowConfetti(false), 3000);
     }
   }, [showResult, currentQuestion, currentDiscount]);
-
   const handleAnswerSelect = (answerIndex: number) => {
     if (showResult) return;
     setSelectedAnswer(answerIndex);
   };
-
   const handleNextQuestion = () => {
     if (selectedAnswer === null) return;
     const isCorrect = selectedAnswer === questions[currentQuestion].correctAnswer;
@@ -109,7 +101,6 @@ export const QuizGame = () => {
       }, 100);
     }
   };
-
   const handleContinue = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
@@ -118,7 +109,6 @@ export const QuizGame = () => {
       setAnsweredCorrectly(false);
     }
   };
-
   const handleRestart = () => {
     setCurrentQuestion(0);
     setSelectedAnswer(null);
@@ -128,11 +118,9 @@ export const QuizGame = () => {
     setShowConfetti(false);
     setAnsweredCorrectly(false);
   };
-
   const toggleSound = () => {
     setSoundEnabled(!soundEnabled);
   };
-
   const shareResult = () => {
     if (navigator.share) {
       navigator.share({
@@ -142,11 +130,9 @@ export const QuizGame = () => {
       });
     }
   };
-
   const goToStore = () => {
     window.open('https://www.netshoes.com.br/', '_blank');
   };
-
   if (gameCompleted) {
     return <>
       <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-netshoes-purple-dark flex items-center justify-center p-2 sm:p-4">
@@ -203,7 +189,6 @@ export const QuizGame = () => {
       <Footer />
     </>;
   }
-
   return <>
     <div className="min-h-screen bg-gradient-to-br from-background via-netshoes-light-gray to-background flex items-center justify-center p-2 sm:p-4">
       {showConfetti && <Confetti />}
@@ -215,25 +200,16 @@ export const QuizGame = () => {
           {/* Logo interativa Quiz Netshoes */}
           <div className="flex justify-center mb-6">
             <div className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:rotate-1 active:scale-95">
-              <img 
-                src={quizNetshoesLogo} 
-                alt="Quiz Netshoes Logo" 
-                className="h-12 sm:h-16 w-auto rounded-lg shadow-soft group-hover:shadow-celebration transition-all duration-300 hover:brightness-110 hover:drop-shadow-lg"
-                onClick={() => window.open('https://www.netshoes.com.br/', '_blank')}
-              />
+              <img src={quizNetshoesLogo} alt="Quiz Netshoes Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft group-hover:shadow-celebration transition-all duration-300 hover:brightness-110 hover:drop-shadow-lg" onClick={() => window.open('https://www.netshoes.com.br/', '_blank')} />
               <div className="absolute inset-0 rounded-lg bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           </div>
           
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-netshoes-black">
-                QUIZ <span className="gradient-text">NETSHOES</span>
-              </h1>
+              
             </div>
-            <p className="text-base sm:text-lg text-netshoes-gray">
-              Responda e ganhe descontos incríveis! 🏃‍♂️
-            </p>
+            <p className="text-base sm:text-lg text-netshoes-gray">A cada resposta certa, você ganha 10% OFF. Complete tudo e aproveite até 60% de desconto no site oficial Netshoes! 🏃‍♂️</p>
           </div>
           
           {/* Sound Toggle */}
@@ -261,11 +237,7 @@ export const QuizGame = () => {
               {/* Imagem dinâmica da pergunta */}
               <div className="flex justify-center mb-6">
                 <div className="quiz-bounce">
-                  <img 
-                    src={quizImages[currentQuestion]} 
-                    alt={`Ilustração da pergunta ${currentQuestion + 1}`}
-                    className="w-full max-w-md h-48 object-cover rounded-xl shadow-medium transition-all duration-500 hover:scale-105 hover:shadow-celebration"
-                  />
+                  <img src={quizImages[currentQuestion]} alt={`Ilustração da pergunta ${currentQuestion + 1}`} className="w-full max-w-md h-48 object-cover rounded-xl shadow-medium transition-all duration-500 hover:scale-105 hover:shadow-celebration" />
                 </div>
               </div>
               
