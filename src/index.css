@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Reserva Design System */
+    /* Netshoes Design System */
     --background: 0 0% 100%;
     --foreground: 0 0% 0%;
 
@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    /* Reserva Red - Cor principal da marca */
-    --primary: 0 82% 55%;
+    /* Netshoes Purple - Cor principal da marca */
+    --primary: 268 100% 51%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -28,7 +28,7 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 0 82% 55%;
+    --accent: 268 100% 51%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,23 +36,23 @@ All colors MUST be HSL.
 
     --border: 0 0% 91%;
     --input: 0 0% 91%;
-    --ring: 0 82% 55%;
+    --ring: 268 100% 51%;
 
     --radius: 1rem;
 
-    /* Reserva Custom Colors */
-    --reserva-red: 0 82% 55%;
-    --reserva-red-light: 0 82% 70%;
-    --reserva-red-dark: 0 82% 40%;
-    --reserva-store-button: 0 82% 55%;
-    --reserva-black: 0 0% 0%;
-    --reserva-white: 0 0% 100%;
-    --reserva-gray: 0 0% 45%;
-    --reserva-light-gray: 0 0% 96%;
+    /* Netshoes Custom Colors */
+    --netshoes-purple: 268 100% 51%;
+    --netshoes-purple-light: 268 100% 65%;
+    --netshoes-purple-dark: 268 100% 40%;
+    --netshoes-store-button: 268 100% 51%;
+    --netshoes-black: 0 0% 0%;
+    --netshoes-white: 0 0% 100%;
+    --netshoes-gray: 0 0% 45%;
+    --netshoes-light-gray: 0 0% 96%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--reserva-red)), hsl(var(--reserva-red-light)));
-    --gradient-celebration: linear-gradient(45deg, #ff6b6b, #ffd93d, #6bcf7f, #4ecdc4, #45b7d1);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--netshoes-purple)), hsl(var(--netshoes-purple-light)));
+    --gradient-celebration: linear-gradient(45deg, #8200ff, #9d4edd, #c77dff, #e0aaff, #f3e8ff);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,7 +61,7 @@ All colors MUST be HSL.
     /* Shadows */
     --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-celebration: 0 20px 25px -5px rgba(230, 36, 41, 0.3), 0 10px 10px -5px rgba(230, 36, 41, 0.04);
+    --shadow-celebration: 0 20px 25px -5px rgba(130, 0, 255, 0.3), 0 10px 10px -5px rgba(130, 0, 255, 0.04);
 
     --sidebar-background: 0 0% 98%;
 

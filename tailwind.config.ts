@@ -62,19 +62,19 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				reserva: {
-					red: 'hsl(var(--reserva-red))',
-					'red-light': 'hsl(var(--reserva-red-light))',
-					'red-dark': 'hsl(var(--reserva-red-dark))',
-					'store-button': 'hsl(var(--reserva-store-button))',
-					black: 'hsl(var(--reserva-black))',
-					white: 'hsl(var(--reserva-white))',
-					gray: 'hsl(var(--reserva-gray))',
-					'light-gray': 'hsl(var(--reserva-light-gray))'
+				netshoes: {
+					purple: 'hsl(var(--netshoes-purple))',
+					'purple-light': 'hsl(var(--netshoes-purple-light))',
+					'purple-dark': 'hsl(var(--netshoes-purple-dark))',
+					'store-button': 'hsl(var(--netshoes-store-button))',
+					black: 'hsl(var(--netshoes-black))',
+					white: 'hsl(var(--netshoes-white))',
+					gray: 'hsl(var(--netshoes-gray))',
+					'light-gray': 'hsl(var(--netshoes-light-gray))'
 				}
 			},
 			fontFamily: {
-				'reserva': ['Inter', 'Roboto', 'system-ui', 'sans-serif'],
+				'netshoes': ['Inter', 'Roboto', 'system-ui', 'sans-serif'],
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
