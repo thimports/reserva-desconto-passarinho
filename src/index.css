@@ -49,6 +49,7 @@ All colors MUST be HSL.
     --netshoes-white: 269 100% 50%;
     --netshoes-gray: 0 0% 45%;
     --netshoes-light-gray: 0 0% 96%;
+    --netshoes-progress: 76 100% 62%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--netshoes-purple)), hsl(var(--netshoes-purple-light)));
