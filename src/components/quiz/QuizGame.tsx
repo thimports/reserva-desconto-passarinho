@@ -24,22 +24,22 @@ interface Question {
 
 const questions: Question[] = [{
   id: 1,
-  question: "Em que ano a Netshoes foi fundada?",
-  options: ["1999", "2000", "2001", "2002"],
-  correctAnswer: 1,
-  explanation: "A Netshoes foi fundada em 2000 e se tornou referência em e-commerce esportivo!"
+  question: "O que você usa no pé para correr?",
+  options: ["Tênis", "Chapéu", "Óculos", "Luvas"],
+  correctAnswer: 0,
+  explanation: "Isso mesmo! A Netshoes tem os melhores tênis para você correr e brincar! 👟"
 }, {
   id: 2,
-  question: "Qual é o foco principal da Netshoes?",
-  options: ["Roupas Casuais", "Artigos Esportivos", "Eletrônicos", "Casa e Decoração"],
+  question: "Que cor é uma bola de basquete?",
+  options: ["Azul", "Laranja", "Rosa", "Verde"],
   correctAnswer: 1,
-  explanation: "A Netshoes é especializada em artigos esportivos e lifestyle!"
+  explanation: "Correto! As bolas de basquete são laranjas, e você encontra na Netshoes! 🏀"
 }, {
   id: 3,
-  question: "Qual marca é famosa por suas parcerias com a Netshoes?",
-  options: ["Nike", "Adidas", "Puma", "Todas as anteriores"],
-  correctAnswer: 3,
-  explanation: "A Netshoes trabalha com todas as principais marcas esportivas do mundo!"
+  question: "Onde as pessoas compram roupas e tênis pela internet?",
+  options: ["Na cozinha", "Na loja online", "No banheiro", "Na escola"],
+  correctAnswer: 1,
+  explanation: "Perfeito! A Netshoes é uma loja online onde você compra tudo de esporte! 🛒"
 }];
 
 const quizImages = [quizImage1, quizImage2, quizImage3];
