@@ -12,6 +12,9 @@ import netshoesLogo from '/lovable-uploads/12fcfe49-228a-4ac0-ad46-d2e432e0239c.
 import quizImage1 from '@/assets/quiz-question-1.jpg';
 import quizImage2 from '@/assets/quiz-question-2.jpg';
 import quizImage3 from '@/assets/quiz-question-3.jpg';
+import quizImage4 from '@/assets/quiz-question-4.jpg';
+import quizImage5 from '@/assets/quiz-question-5.jpg';
+import quizImage6 from '@/assets/quiz-question-6.jpg';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
 
 interface Question {
@@ -40,9 +43,27 @@ const questions: Question[] = [{
   options: ["Na cozinha", "Na loja online", "No banheiro", "Na escola"],
   correctAnswer: 1,
   explanation: "Perfeito! A Netshoes é uma loja online onde você compra tudo de esporte! 🛒"
+}, {
+  id: 4,
+  question: "O que você usa para jogar futebol?",
+  options: ["Uma bola", "Um livro", "Uma panela", "Um telefone"],
+  correctAnswer: 0,
+  explanation: "Isso aí! Para jogar futebol você precisa de uma bola! ⚽"
+}, {
+  id: 5,
+  question: "Onde as pessoas nadam?",
+  options: ["Na cama", "Na piscina", "No carro", "Na mesa"],
+  correctAnswer: 1,
+  explanation: "Correto! As pessoas nadam na piscina! 🏊‍♂️"
+}, {
+  id: 6,
+  question: "Fazer exercício é bom para quê?",
+  options: ["Para ficar triste", "Para ficar doente", "Para ficar forte e saudável", "Para ficar com sono"],
+  correctAnswer: 2,
+  explanation: "Perfeito! Exercitar-se faz bem para a saúde e deixa a gente forte! 💪"
 }];
 
-const quizImages = [quizImage1, quizImage2, quizImage3];
+const quizImages = [quizImage1, quizImage2, quizImage3, quizImage4, quizImage5, quizImage6];
 
 export const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -54,7 +75,7 @@ export const QuizGame = () => {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
   const progress = (currentQuestion + (showResult ? 1 : 0)) / questions.length * 100;
-  const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 20, 60);
+  const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 10, 60);
 
   useEffect(() => {
     if (showResult) {
@@ -275,7 +296,7 @@ export const QuizGame = () => {
                     </h3>
                     <div className="discount-grow">
                       <Badge className="text-3xl font-black bg-gradient-primary text-white px-6 py-3 rounded-xl">
-                        +20% OFF
+                        +10% OFF
                       </Badge>
                     </div>
                   </div> : <div className="space-y-4">
