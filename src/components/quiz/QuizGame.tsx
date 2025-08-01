@@ -9,6 +9,9 @@ import { Footer } from '@/components/Footer';
 import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
 import netshoesLogo from '/lovable-uploads/12fcfe49-228a-4ac0-ad46-d2e432e0239c.png';
+import quizImage1 from '@/assets/quiz-question-1.jpg';
+import quizImage2 from '@/assets/quiz-question-2.jpg';
+import quizImage3 from '@/assets/quiz-question-3.jpg';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
 
 interface Question {
@@ -38,6 +41,8 @@ const questions: Question[] = [{
   correctAnswer: 3,
   explanation: "A Netshoes trabalha com todas as principais marcas esportivas do mundo!"
 }];
+
+const quizImages = [quizImage1, quizImage2, quizImage3];
 
 export const QuizGame = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -231,6 +236,17 @@ export const QuizGame = () => {
         {/* Quiz Card */}
         <Card className="p-4 sm:p-6 md:p-8 shadow-medium">
           {!showResult ? <div className="space-y-6">
+              {/* Imagem dinâmica da pergunta */}
+              <div className="flex justify-center mb-6">
+                <div className="quiz-bounce">
+                  <img 
+                    src={quizImages[currentQuestion]} 
+                    alt={`Ilustração da pergunta ${currentQuestion + 1}`}
+                    className="w-full max-w-md h-48 object-cover rounded-xl shadow-medium transition-all duration-500 hover:scale-105 hover:shadow-celebration"
+                  />
+                </div>
+              </div>
+              
               <div className="text-center">
                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-netshoes-black mb-4 sm:mb-6">
                   {questions[currentQuestion].question}
