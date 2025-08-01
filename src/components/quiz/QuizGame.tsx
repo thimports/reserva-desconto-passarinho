@@ -8,7 +8,6 @@ import { SoundManager } from './SoundManager';
 import { Footer } from '@/components/Footer';
 import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
-import quizNetshoesLogo from '/lovable-uploads/ee741c53-2e8d-47b9-9d2a-603f1bbe14a2.png';
 
 import quizImage1 from '@/assets/quiz-question-1.jpg';
 import quizImage2 from '@/assets/quiz-question-2.jpg';
@@ -212,18 +211,6 @@ export const QuizGame = () => {
       <div className="w-full max-w-2xl space-y-4 sm:space-y-6">
         {/* Header */}
         <div className="text-center space-y-4">
-          {/* Logo interativa Quiz Netshoes */}
-          <div className="flex justify-center mb-6">
-            <div className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:rotate-1 active:scale-95">
-              <img 
-                src={quizNetshoesLogo} 
-                alt="Quiz Netshoes Logo" 
-                className="h-12 sm:h-16 w-auto rounded-lg shadow-soft group-hover:shadow-celebration transition-all duration-300 hover:brightness-110 hover:drop-shadow-lg"
-                onClick={() => window.open('https://www.netshoes.com.br/', '_blank')}
-              />
-              <div className="absolute inset-0 rounded-lg bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            </div>
-          </div>
           
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
