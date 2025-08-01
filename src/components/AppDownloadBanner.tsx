@@ -11,7 +11,7 @@ export const AppDownloadBanner = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-primary to-primary/80 text-white py-4 px-6 rounded-lg shadow-lg mx-4 my-6">
+    <div className="bg-gradient-to-br from-primary via-primary to-netshoes-purple-dark text-white py-4 px-6 rounded-lg shadow-lg mx-4 my-6">
       <div className="flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <div className="bg-white/20 p-2 rounded-full">
