@@ -195,7 +195,7 @@ export const QuizGame = () => {
     </>;
   }
   return <>
-    <div className="min-h-screen bg-gradient-to-br from-background via-netshoes-light-gray to-background flex items-center justify-center p-2 sm:p-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary via-primary to-netshoes-purple-dark flex items-center justify-center p-2 sm:p-4">
       {showConfetti && <Confetti />}
       <SoundManager enabled={soundEnabled} />
       
