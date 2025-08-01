@@ -185,18 +185,6 @@ export const QuizGame = () => {
       <div className="w-full max-w-2xl space-y-4 sm:space-y-6">
         {/* Header */}
         <div className="text-center space-y-4">
-          {/* Logo interativa da Netshoes */}
-          <div className="flex justify-center mb-6">
-            <div className="group cursor-pointer transition-all duration-300 hover:scale-110 hover:rotate-2">
-              <img 
-                src={netshoesLogo} 
-                alt="Netshoes Logo" 
-                className="h-12 sm:h-16 w-auto rounded-lg shadow-medium group-hover:shadow-celebration transition-all duration-300 hover:brightness-110"
-                onClick={() => window.open('https://www.netshoes.com.br/', '_blank')}
-              />
-            </div>
-          </div>
-          
           <div className="quiz-bounce">
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-netshoes-black">
