@@ -14,7 +14,7 @@ import quizImage2 from '/lovable-uploads/b61dc12a-7bde-4517-b438-49f7c388ad74.pn
 import quizImage3 from '/lovable-uploads/151da1e5-9458-4659-a6f7-47293e3c96dd.png';
 import quizImage4 from '/lovable-uploads/9ad91848-4da8-4984-864d-907cd60f1628.png';
 import quizImage5 from '/lovable-uploads/99f04ea7-79a3-4d78-9f1a-4ed9daccb007.png';
-import quizImage6 from '@/assets/quiz-question-6.jpg';
+import quizImage6 from '/lovable-uploads/f52a9966-d4b1-4052-9bcd-778bdadbe60b.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
 interface Question {
   id: number;
