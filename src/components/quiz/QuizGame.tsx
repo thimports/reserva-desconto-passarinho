@@ -9,7 +9,7 @@ import { Footer } from '@/components/Footer';
 import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
 import quizNetshoesLogo from '/lovable-uploads/d4e7fb9b-ecc9-46e8-82d4-c1590ce67235.png';
-import quizImage1 from '@/assets/quiz-question-1.jpg';
+import quizImage1 from '/lovable-uploads/79edcbfc-172c-46ea-b6b3-d11fe56ee8d8.png';
 import quizImage2 from '@/assets/quiz-question-2.jpg';
 import quizImage3 from '@/assets/quiz-question-3.jpg';
 import quizImage4 from '@/assets/quiz-question-4.jpg';
