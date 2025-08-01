@@ -19,7 +19,7 @@ All colors MUST be HSL.
     --popover-foreground: 0 0% 0%;
 
     /* Netshoes Purple - Cor principal da marca */
-    --primary: 268 100% 51%;
+    --primary: 269 100% 50%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -41,10 +41,10 @@ All colors MUST be HSL.
     --radius: 1rem;
 
     /* Netshoes Custom Colors */
-    --netshoes-purple: 268 100% 51%;
-    --netshoes-purple-light: 268 100% 65%;
-    --netshoes-purple-dark: 268 100% 40%;
-    --netshoes-store-button: 268 100% 51%;
+    --netshoes-purple: 269 100% 50%;
+    --netshoes-purple-light: 269 100% 65%;
+    --netshoes-purple-dark: 269 100% 40%;
+    --netshoes-store-button: 269 100% 50%;
     --netshoes-black: 0 0% 0%;
     --netshoes-white: 0 0% 100%;
     --netshoes-gray: 0 0% 45%;
