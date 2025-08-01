@@ -27,40 +27,40 @@ interface Question {
 
 const questions: Question[] = [{
   id: 1,
-  question: "O que você usa no pé para correr?",
-  options: ["Tênis", "Chapéu", "Óculos", "Luvas"],
+  question: "Qual é a cor principal do logo da Netshoes?",
+  options: ["Roxo", "Amarelo", "Vermelho", "Azul"],
   correctAnswer: 0,
-  explanation: "Isso mesmo! A Netshoes tem os melhores tênis para você correr e brincar! 👟"
+  explanation: "Isso mesmo! O roxo é a cor especial da Netshoes! 💜"
 }, {
   id: 2,
-  question: "Que cor é uma bola de basquete?",
-  options: ["Azul", "Laranja", "Rosa", "Verde"],
+  question: "Qual marca tem um símbolo que parece um 'risquinho'?",
+  options: ["Adidas", "Nike", "Puma", "Reebok"],
   correctAnswer: 1,
-  explanation: "Correto! As bolas de basquete são laranjas, e você encontra na Netshoes! 🏀"
+  explanation: "Correto! A Nike tem o famoso 'swoosh' que parece um risquinho! ✅"
 }, {
   id: 3,
-  question: "Onde as pessoas compram roupas e tênis pela internet?",
-  options: ["Na cozinha", "Na loja online", "No banheiro", "Na escola"],
-  correctAnswer: 1,
-  explanation: "Perfeito! A Netshoes é uma loja online onde você compra tudo de esporte! 🛒"
+  question: "Quantos risquinhos tem no logo da Adidas?",
+  options: ["Um", "Dois", "Três", "Quatro"],
+  correctAnswer: 2,
+  explanation: "Perfeito! A Adidas tem três listras famosas! 🏃‍♂️"
 }, {
   id: 4,
-  question: "O que você usa para jogar futebol?",
-  options: ["Uma bola", "Um livro", "Uma panela", "Um telefone"],
-  correctAnswer: 0,
-  explanation: "Isso aí! Para jogar futebol você precisa de uma bola! ⚽"
+  question: "A Netshoes vende o quê?",
+  options: ["Comida", "Tênis e roupas esportivas", "Carros", "Livros"],
+  correctAnswer: 1,
+  explanation: "Isso aí! A Netshoes é especialista em tênis e roupas de esporte! 👟"
 }, {
   id: 5,
-  question: "Onde as pessoas nadam?",
-  options: ["Na cama", "Na piscina", "No carro", "Na mesa"],
-  correctAnswer: 1,
-  explanation: "Correto! As pessoas nadam na piscina! 🏊‍♂️"
+  question: "Onde você pode comprar produtos da Netshoes?",
+  options: ["Só na loja física", "Só no telefone", "Na internet também", "Só no shopping"],
+  correctAnswer: 2,
+  explanation: "Correto! Você pode comprar na Netshoes pela internet, é super fácil! 🖥️"
 }, {
   id: 6,
-  question: "Fazer exercício é bom para quê?",
-  options: ["Para ficar triste", "Para ficar doente", "Para ficar forte e saudável", "Para ficar com sono"],
-  correctAnswer: 2,
-  explanation: "Perfeito! Exercitar-se faz bem para a saúde e deixa a gente forte! 💪"
+  question: "Qual dessas marcas famosas você encontra na Netshoes?",
+  options: ["Nike e Adidas", "Só Nike", "Só Adidas", "Nenhuma delas"],
+  correctAnswer: 0,
+  explanation: "Perfeito! Na Netshoes você encontra Nike, Adidas e muitas outras marcas incríveis! 🌟"
 }];
 
 const quizImages = [quizImage1, quizImage2, quizImage3, quizImage4, quizImage5, quizImage6];
