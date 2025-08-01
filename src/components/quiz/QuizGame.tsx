@@ -141,6 +141,11 @@ export const QuizGame = () => {
         
         <Card className="w-full max-w-2xl p-4 sm:p-6 md:p-8 text-center quiz-celebration">
           <div className="space-y-6">
+            {/* Logo */}
+            <div className="flex justify-center">
+              <img src={quizNetshoesLogo} alt="Quiz Netshoes Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft" />
+            </div>
+            
             <div className="quiz-bounce">
               <Trophy className="w-20 h-20 mx-auto text-primary mb-4" />
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-netshoes-black mb-2">
