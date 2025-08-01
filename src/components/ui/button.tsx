@@ -21,7 +21,7 @@ const buttonVariants = cva(
         quiz: "bg-gradient-primary text-white font-bold shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300",
         "quiz-answer": "bg-white text-reserva-black border-2 border-border hover:border-primary hover:bg-primary/5 transition-all duration-300 transform hover:scale-[1.02]",
         celebration: "bg-gradient-celebration text-white font-black shadow-celebration animate-pulse",
-        store: "bg-reserva-store-button text-white font-bold shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300",
+        store: "bg-netshoes-store-button text-white font-bold shadow-soft hover:shadow-medium transform hover:scale-105 transition-all duration-300",
       },
       size: {
         default: "h-12 px-6 py-3",
