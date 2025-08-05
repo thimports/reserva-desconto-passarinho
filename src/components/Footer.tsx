@@ -22,44 +22,13 @@ export const Footer = () => {
           </div>
 
           {/* Especiais Netshoes */}
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-netshoes-black font-bold text-base sm:text-lg">Especiais Netshoes</h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Suplementos</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Corrida</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Bicicletas</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Futebol</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Vôlei</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Basquete</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Motorsport</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Saúde Bem-Estar</a></li>
-            </ul>
-          </div>
+          
 
           {/* Ajuda */}
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-netshoes-black font-bold text-base sm:text-lg">Ajuda</h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Trocas e devoluções</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Entregas</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Minha Conta</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Meus Pedidos</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Pagamentos</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Cancelamentos</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">N.Card</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Segurança & Privacidade</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Como Comprar</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Acessibilidade</a></li>
-            </ul>
-          </div>
+          
 
           {/* Netshoes Empresas */}
-          <div className="space-y-3 sm:space-y-4">
-            <h3 className="text-netshoes-black font-bold text-base sm:text-lg">Netshoes Empresas</h3>
-            <ul className="space-y-1.5 sm:space-y-2">
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Marketplace Netshoes</a></li>
-            </ul>
-          </div>
+          
 
           {/* Central de Relacionamento */}
           <div className="space-y-3 sm:space-y-4">
@@ -102,14 +71,7 @@ export const Footer = () => {
         </div>
 
         {/* Mapas do Site */}
-        <div className="mt-8 pt-6 border-t border-gray-200">
-          <h3 className="text-netshoes-black font-bold text-base sm:text-lg mb-4">Mapas do Site</h3>
-          <div className="flex flex-wrap gap-6">
-            <a href="#" className="text-sm text-netshoes-gray hover:text-netshoes-purple transition-colors">Marcas</a>
-            <a href="#" className="text-sm text-netshoes-gray hover:text-netshoes-purple transition-colors">Tipos de Produtos</a>
-            <a href="#" className="text-sm text-netshoes-gray hover:text-netshoes-purple transition-colors">Departamentos</a>
-          </div>
-        </div>
+        
 
         {/* Copyright */}
         <div className="text-center mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
