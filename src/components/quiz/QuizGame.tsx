@@ -25,40 +25,28 @@ interface Question {
 }
 const questions: Question[] = [{
   id: 1,
-  question: "Qual é a cor principal do logo da Netshoes?",
-  options: ["Roxo", "Amarelo", "Vermelho", "Azul"],
+  question: "Qual é a cor principal do logo da Centauro?",
+  options: ["Vermelho", "Azul", "Verde", "Amarelo"],
   correctAnswer: 0,
-  explanation: "Isso mesmo! O roxo é a cor especial da Netshoes! 💜"
+  explanation: "Isso mesmo! O vermelho é a cor especial da Centauro! ❤️"
 }, {
   id: 2,
-  question: "Qual marca tem um símbolo que parece um 'risquinho'?",
-  options: ["Adidas", "Nike", "Puma", "Reebok"],
+  question: "A Centauro é especializada em que tipo de produtos?",
+  options: ["Eletrônicos", "Artigos esportivos", "Roupas casuais", "Livros"],
   correctAnswer: 1,
-  explanation: "Correto! A Nike tem o famoso 'swoosh' que parece um risquinho! ✅"
+  explanation: "Correto! A Centauro é especialista em artigos esportivos! 🏃‍♂️"
 }, {
   id: 3,
-  question: "Quantos risquinhos tem no logo da Adidas?",
-  options: ["Um", "Dois", "Três", "Quatro"],
-  correctAnswer: 2,
-  explanation: "Perfeito! A Adidas tem três listras famosas! 🏃‍♂️"
-}, {
-  id: 4,
-  question: "A Netshoes vende o quê?",
-  options: ["Comida", "Tênis e roupas esportivas", "Carros", "Livros"],
-  correctAnswer: 1,
-  explanation: "Isso aí! A Netshoes é especialista em tênis e roupas de esporte! 👟"
-}, {
-  id: 5,
-  question: "Onde você pode comprar produtos da Netshoes?",
-  options: ["Só na loja física", "Só no telefone", "Na internet também", "Só no shopping"],
-  correctAnswer: 2,
-  explanation: "Correto! Você pode comprar na Netshoes pela internet, é super fácil! 🖥️"
-}, {
-  id: 6,
-  question: "Qual dessas marcas famosas você encontra na Netshoes?",
+  question: "Qual dessas marcas famosas você encontra na Centauro?",
   options: ["Nike e Adidas", "Só Nike", "Só Adidas", "Nenhuma delas"],
   correctAnswer: 0,
-  explanation: "Perfeito! Na Netshoes você encontra Nike, Adidas e muitas outras marcas incríveis! 🌟"
+  explanation: "Perfeito! Na Centauro você encontra Nike, Adidas e muitas outras marcas incríveis! 🌟"
+}, {
+  id: 4,
+  question: "A Centauro oferece produtos para quais modalidades?",
+  options: ["Só futebol", "Só corrida", "Várias modalidades esportivas", "Só natação"],
+  correctAnswer: 2,
+  explanation: "Isso aí! A Centauro tem produtos para futebol, corrida, academia, natação e muito mais! 🏆"
 }];
 const quizImages = [quizImage1, quizImage2, quizImage3, quizImage4, quizImage5, quizImage6];
 export const QuizGame = () => {
@@ -71,7 +59,7 @@ export const QuizGame = () => {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
   const progress = (currentQuestion + (showResult ? 1 : 0)) / questions.length * 100;
-  const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 10, 60);
+  const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 10, 40);
   useEffect(() => {
     if (showResult) {
       setDiscount(currentDiscount);
@@ -214,7 +202,7 @@ export const QuizGame = () => {
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               
             </div>
-            <p className="text-base sm:text-lg text-white">A cada resposta certa, você ganha 10% OFF. Complete tudo e aproveite até 60% de desconto no site oficial Netshoes! 🏃‍♂️</p>
+            <p className="text-base sm:text-lg text-white">A cada resposta certa, você ganha 10% OFF. Complete tudo e aproveite até 40% de desconto na Centauro! 🏃‍♂️</p>
           </div>
           
           {/* Sound Toggle */}
