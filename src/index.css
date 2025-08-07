@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 0%;
 
-    /* Netshoes Purple - Cor principal da marca */
-    --primary: 269 100% 50%;
+    /* Netshoes Red - Cor principal da marca */
+    --primary: 0 100% 45%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 0 0% 96%;
@@ -28,7 +28,7 @@ All colors MUST be HSL.
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 268 100% 51%;
+    --accent: 0 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,24 +36,24 @@ All colors MUST be HSL.
 
     --border: 0 0% 91%;
     --input: 0 0% 91%;
-    --ring: 268 100% 51%;
+    --ring: 0 100% 50%;
 
     --radius: 1rem;
 
     /* Netshoes Custom Colors */
-    --netshoes-purple: 269 100% 50%;
-    --netshoes-purple-light: 269 100% 65%;
-    --netshoes-purple-dark: 269 100% 40%;
-    --netshoes-store-button: 269 100% 50%;
+    --netshoes-purple: 0 100% 45%;
+    --netshoes-purple-light: 0 100% 60%;
+    --netshoes-purple-dark: 0 100% 35%;
+    --netshoes-store-button: 0 100% 45%;
     --netshoes-black: 0 0% 0%;
-    --netshoes-white: 269 100% 50%;
+    --netshoes-white: 0 100% 45%;
     --netshoes-gray: 0 0% 45%;
     --netshoes-light-gray: 0 0% 96%;
     --netshoes-progress: 76 100% 62%;
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--netshoes-purple)), hsl(var(--netshoes-purple-light)));
-    --gradient-celebration: linear-gradient(45deg, #8200ff, #9d4edd, #c77dff, #e0aaff, #f3e8ff);
+    --gradient-celebration: linear-gradient(45deg, #e30000, #f44336, #ff5722, #ff9800, #ffc107);
 
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -62,7 +62,7 @@ All colors MUST be HSL.
     /* Shadows */
     --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-celebration: 0 20px 25px -5px rgba(130, 0, 255, 0.3), 0 10px 10px -5px rgba(130, 0, 255, 0.04);
+    --shadow-celebration: 0 20px 25px -5px rgba(227, 0, 0, 0.3), 0 10px 10px -5px rgba(227, 0, 0, 0.04);
 
     --sidebar-background: 0 0% 98%;
 
