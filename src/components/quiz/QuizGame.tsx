@@ -8,7 +8,7 @@ import { SoundManager } from './SoundManager';
 import { Footer } from '@/components/Footer';
 import { AppDownloadBanner } from '@/components/AppDownloadBanner';
 import birdMascot from '@/assets/reserva-bird-mascot.png';
-import quizNetshoesLogo from '/lovable-uploads/d4e7fb9b-ecc9-46e8-82d4-c1590ce67235.png';
+import quizCentauroLogo from '/lovable-uploads/4546075b-b58e-4389-b1d4-f35cbcfcc988.png';
 import quizImage1 from '/lovable-uploads/79edcbfc-172c-46ea-b6b3-d11fe56ee8d8.png';
 import quizImage2 from '/lovable-uploads/b61dc12a-7bde-4517-b438-49f7c388ad74.png';
 import quizImage3 from '/lovable-uploads/151da1e5-9458-4659-a6f7-47293e3c96dd.png';
@@ -131,7 +131,7 @@ export const QuizGame = () => {
           <div className="space-y-6">
             {/* Logo */}
             <div className="flex justify-center">
-              <img src={quizNetshoesLogo} alt="Quiz Netshoes Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft" />
+              <img src={quizCentauroLogo} alt="Quiz Centauro Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft" />
             </div>
             
             <div className="quiz-bounce">
@@ -193,7 +193,7 @@ export const QuizGame = () => {
           {/* Logo interativa Quiz Netshoes */}
           <div className="flex justify-center mb-6">
             <div className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:rotate-1 active:scale-95">
-              <img src={quizNetshoesLogo} alt="Quiz Netshoes Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft group-hover:shadow-celebration transition-all duration-300 hover:brightness-110 hover:drop-shadow-lg" onClick={() => window.open('https://www.netshoes.com.br/', '_blank')} />
+              <img src={quizCentauroLogo} alt="Quiz Centauro Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft group-hover:shadow-celebration transition-all duration-300 hover:brightness-110 hover:drop-shadow-lg" onClick={() => window.open('https://www.netshoes.com.br/', '_blank')} />
               <div className="absolute inset-0 rounded-lg bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           </div>
