@@ -131,7 +131,7 @@ export const QuizGame = () => {
           <div className="space-y-6">
             {/* Logo */}
             <div className="flex justify-center">
-              <img src={quizCentauroLogo} alt="Quiz Centauro Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft" />
+              <img src={quizCentauroLogo} alt="Quiz Centauro Logo" className="h-10 sm:h-12 w-auto rounded-lg shadow-soft" />
             </div>
             
             <div className="quiz-bounce">
@@ -193,7 +193,7 @@ export const QuizGame = () => {
           {/* Logo interativa Quiz Netshoes */}
           <div className="flex justify-center mb-6">
             <div className="group cursor-pointer transition-all duration-300 hover:scale-105 hover:rotate-1 active:scale-95">
-              <img src={quizCentauroLogo} alt="Quiz Centauro Logo" className="h-12 sm:h-16 w-auto rounded-lg shadow-soft group-hover:shadow-celebration transition-all duration-300 hover:brightness-110 hover:drop-shadow-lg" onClick={() => window.open('https://www.netshoes.com.br/', '_blank')} />
+              <img src={quizCentauroLogo} alt="Quiz Centauro Logo" className="h-10 sm:h-12 w-auto rounded-lg shadow-soft group-hover:shadow-celebration transition-all duration-300 hover:brightness-110 hover:drop-shadow-lg" onClick={() => window.open('https://www.netshoes.com.br/', '_blank')} />
               <div className="absolute inset-0 rounded-lg bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
             </div>
           </div>
