@@ -119,7 +119,7 @@ export const QuizGame = () => {
     }
   };
   const goToStore = () => {
-    window.open('https://lojanetshoesliquida.myshopify.com', '_blank');
+    window.open('https://lojacentaurobrasil.site/', '_blank');
   };
   if (gameCompleted) {
     return <>
