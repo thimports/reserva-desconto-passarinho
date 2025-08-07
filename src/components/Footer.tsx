@@ -15,8 +15,8 @@ export const Footer = () => {
               <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Relatórios</a></li>
               <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Programa de Integridade</a></li>
               <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Blog</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Black Friday Magalu</a></li>
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Black Friday Netshoes</a></li>
+              
+              
               <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Lojas Físicas</a></li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ export const Footer = () => {
               <p className="text-sm text-netshoes-gray">(11) 3028-5355 e (11) 3070-6999</p>
               
               <div className="flex items-center gap-2 mt-4">
-                <span className="text-netshoes-black font-medium text-sm">App Netshoes</span>
+                <span className="text-netshoes-black font-medium text-sm">App Centauro</span>
               </div>
               <p className="text-xs text-netshoes-gray">Conheça as vantagens</p>
             </div>
