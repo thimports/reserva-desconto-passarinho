@@ -7,7 +7,7 @@ export const Footer = () => {
           <div className="space-y-3 sm:space-y-4">
             <h3 className="text-netshoes-black font-bold text-base sm:text-lg">Institucional</h3>
             <ul className="space-y-1.5 sm:space-y-2">
-              <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Sobre a Netshoes</a></li>
+              
               <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Política de Privacidade</a></li>
               <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Programa de Afiliados</a></li>
               <li><a href="#" className="text-sm sm:text-base text-netshoes-gray hover:text-netshoes-purple transition-colors">Soluções Corporativas</a></li>
