@@ -12,7 +12,7 @@ import quizCentauroLogo from '/lovable-uploads/4546075b-b58e-4389-b1d4-f35cbcfcc
 import quizImage1 from '/lovable-uploads/48550f55-025d-45b8-98eb-2631e7d03e8a.png';
 import quizImage2 from '/lovable-uploads/b61dc12a-7bde-4517-b438-49f7c388ad74.png';
 import quizImage3 from '/lovable-uploads/9baa0ef4-0072-4462-afe9-fd4ccf446a2d.png';
-import quizImage4 from '/lovable-uploads/9ad91848-4da8-4984-864d-907cd60f1628.png';
+import quizImage4 from '/lovable-uploads/591d71b2-c4d7-4b6f-9962-3fee1d89e084.png';
 import quizImage5 from '/lovable-uploads/99f04ea7-79a3-4d78-9f1a-4ed9daccb007.png';
 import quizImage6 from '/lovable-uploads/f52a9966-d4b1-4052-9bcd-778bdadbe60b.png';
 import { Trophy, Star, Gift, Sparkles, ChevronRight, Share2, ShoppingBag, Volume2, VolumeX } from 'lucide-react';
