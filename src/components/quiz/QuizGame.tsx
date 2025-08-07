@@ -31,10 +31,10 @@ const questions: Question[] = [{
   explanation: "Isso mesmo! O vermelho é a cor especial da Centauro! ❤️"
 }, {
   id: 2,
-  question: "A Centauro é especializada em que tipo de produtos?",
-  options: ["Eletrônicos", "Artigos esportivos", "Roupas casuais", "Livros"],
-  correctAnswer: 1,
-  explanation: "Correto! A Centauro é especialista em artigos esportivos! 🏃‍♂️"
+  question: "Onde você pode comprar produtos da Centauro?",
+  options: ["Na loja Centauro", "No cinema", "Na farmácia", "No hospital"],
+  correctAnswer: 0,
+  explanation: "Isso mesmo! Na Centauro você encontra tudo para o seu esporte! 🏃‍♂️"
 }, {
   id: 3,
   question: "Qual dessas marcas famosas você encontra na Centauro?",
