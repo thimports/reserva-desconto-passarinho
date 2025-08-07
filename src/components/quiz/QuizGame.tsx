@@ -59,7 +59,7 @@ export const QuizGame = () => {
   const [soundEnabled, setSoundEnabled] = useState(true);
   const [answeredCorrectly, setAnsweredCorrectly] = useState(false);
   const progress = (currentQuestion + (showResult ? 1 : 0)) / questions.length * 100;
-  const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 10, 40);
+  const currentDiscount = Math.min((currentQuestion + (showResult ? 1 : 0)) * 15, 60);
   useEffect(() => {
     if (showResult) {
       setDiscount(currentDiscount);
@@ -202,7 +202,7 @@ export const QuizGame = () => {
             <div className="flex items-center justify-center gap-3 sm:gap-4 mb-3 sm:mb-4">
               
             </div>
-            <p className="text-base sm:text-lg text-white">A cada resposta certa, você ganha 10% OFF. Complete tudo e aproveite até 40% de desconto na Centauro! 🏃‍♂️</p>
+            <p className="text-base sm:text-lg text-white">A cada resposta certa, você ganha 15% OFF. Complete tudo e aproveite até 60% de desconto na Centauro! 🏃‍♂️</p>
           </div>
           
           {/* Sound Toggle */}
@@ -262,7 +262,7 @@ export const QuizGame = () => {
                     </h3>
                     <div className="discount-grow">
                       <Badge className="text-3xl font-black bg-gradient-primary text-white px-6 py-3 rounded-xl">
-                        +10% OFF
+                        +15% OFF
                       </Badge>
                     </div>
                   </div> : <div className="space-y-4">
