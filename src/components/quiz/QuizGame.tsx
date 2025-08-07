@@ -152,9 +152,7 @@ export const QuizGame = () => {
 
             <div className="bg-netshoes-light-gray rounded-2xl p-6 space-y-4">
               <Sparkles className="w-8 h-8 mx-auto text-primary" />
-              <p className="text-lg font-bold text-netshoes-black">
-                Você conhece muito bem a Netshoes! 
-              </p>
+              <p className="text-lg font-bold text-netshoes-black">Você conhece muito bem a Centauro!</p>
               <p className="text-netshoes-gray">
                 Agora é só usar seu desconto e arrasar com o estilo esportivo! 🏃‍♂️
               </p>
