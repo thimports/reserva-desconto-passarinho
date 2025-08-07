@@ -75,7 +75,7 @@ export const Footer = () => {
 
         {/* Copyright */}
         <div className="text-center mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
-          <p className="text-netshoes-gray text-xs sm:text-sm">© 2025 Netshoes. Todos os direitos reservados.</p>
+          <p className="text-netshoes-gray text-xs sm:text-sm">© 2025 Centauro. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>;
